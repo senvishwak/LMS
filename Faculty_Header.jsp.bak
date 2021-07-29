@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>KMIT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href=""><span>STUFAC PORTAL</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="Faculty_Home.jsp">Home</a></li>
+					<li><a href="Faculty_FileUpload.jsp">Add Meterial</a></li>
+					<li><a href="Faculty_Reply.jsp">Reply Queries</a></li>
+     				<li><a href="index.html">Logout</a></li>
+					
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			
+        <%
+		String facbranch=(String)session.getAttribute("facbranch");
+		String facname=(String)session.getAttribute("facname");
+		String facemail=(String)session.getAttribute("facemail");
+		String facid=(String)session.getAttribute("facid");
+		if(facid==null){
+		response.sendRedirect("Faculty_Login.jsp?sesson=timeout");
+		}
+		
+		%>
+		<!-- One -->
+			
+<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Welcome Faculty</p>
+						<h2><%=facname%></h2>
+					</header>
+				</div>
+			</section>
+		
